@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    background-color: rgb(212, 212, 212);
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b37c1f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+
+nav{
+    background-color: black;
+    overflow: visible;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: fixed;
+    border: 2px solid black;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    padding: 20px;
+    
+}
+
+
+
+nav a{
+    float: left;
+    color: #F7F7F7;
+    background-color: #000000;
+    text-align: right;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight: thin;
+}
+
+#contact-btn{
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ce8f24;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+
+#contact-btn:hover{
+    background-color: #b37c1f;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+nav a:hover{
+    background-color: #ce8f24;
+    color: black;
+    transition: 50ms;
+}
+
+.logo {
+    width: 180px;
+    /* Reduced from 300px */
+    height: 50px;
+    /* Reduced from 100px */
+    background-color: transparent !important;
+    position: absolute;
+    top: -48px;
+    /* Adjusted from -20px */
+    left: 20px;
+    /* Changed from -20px */
+    z-index: 1002;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: transparent !important;
+}
+
+.logo a {
+    background-color: transparent !important;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+
+.hero{
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: #000000;
+    padding: 20px;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.hero img {
+    width: 80%;
+    /* Increased from 45% */
+    max-width: 600px;
+    /* Increased from 400px */
+    margin-right: 50px;
+    padding: 0px;
+    transition: transform 0.3s ease;
+}
+
+
+.hero h1{
+    
+    width: 100%;
+    font-size: 3rem;
+    font-weight: thin;
+
+}
+
+.hero p{
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.socials {
+    background: transparent;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-top: -10px;
+    position: relative;
+    justify-content: center;
+}
+
+.socials img {
+    width: 60px;
+    height: auto;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .hero-text,
+        .hero img {
+            width: 100%;
+            margin: 10px 0;
+            padding-top: 20px;
+        }
+    
+        .hero h1 {
+            font-size: 2rem;
+            /* Smaller font size for tablets */
+        }
+
+
+        }
+    
+        @media screen and (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.5rem;
+                /* Even smaller font size for mobile */
+            }
+        }
+
+
+
+
+/* PALVELLUT */
+
+.palvelut{
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding-top: 20px;
+    scroll-margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.palvelut .service-card{
+    border: solid 2px black;
+    width: 50%;
+    border-radius: 10px;
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    align-self: center;
+}
+
+/* TIETOJA */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   margin-top: 100px;
+scroll-margin-top: 100px;
+   padding: 20px;
+   position: relative;
+}
+
+.about .about-card{
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 50%;
+    align-self: center;
+    padding: 20px;
+
+
+}
+
+.about img{
+    width: 300px;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+/* YHTEYSTIEDOT */
+
+.yhteystiedot {
+    border-radius: 10px;
+    margin-top: 100px;
+    scroll-margin-top:100px ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.contact-card .contact-info {
+    text-align: left;
+}
+
+.contact-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Responsiivisuus */
+@media screen and (max-width: 768px) {
+    .contact-card {
+        width: 80%;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-card .contact-info {
+        text-align: center;
+    }
+}
+
+
