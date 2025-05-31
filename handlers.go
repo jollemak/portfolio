@@ -21,5 +21,5 @@ func HandlePortfolio(w http.ResponseWriter, r *http.Request){
 		http.Error(w, "Template parsing error", http.StatusInternalServerError)
 	}
 
-	tmpl.Execute(w, nil)
+	tmpl.Execute(w, nil)  
 }
