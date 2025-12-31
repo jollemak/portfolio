@@ -44,6 +44,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-orange-500: #eb0d1cff;
   --color-gray-900: #1a1a1a;
+  --color-gray-800: #c9bbbbff;
   --animate-aurora: aurora 60s linear infinite;
   
     @keyframes aurora {
