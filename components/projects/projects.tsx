@@ -11,6 +11,7 @@ export const projects = [
           alt="Wasaweb Screenshot"
           width={400}
           height={300}
+          priority
           className="object-cover rounded-lg shadow-lg"
         />
       </div>

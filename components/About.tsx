@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Icons from "./ui/icons";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -9,7 +12,13 @@ const About = () => {
       </h2>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-        <div className="flex-shrink-0">
+        <motion.div
+          className="flex-shrink-0"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <Image
             src="/profile-pic.png"
             alt="Profile Picture"
@@ -18,9 +27,15 @@ const About = () => {
             className="rounded-full border-4 border-orange-500 shadow-2xl"
             style={{ width: "300px", height: "400px" }}
           />
-        </div>
+        </motion.div>
 
-        <div className="flex-1 max-w-2xl">
+        <motion.div
+          className="flex-1 max-w-2xl"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-4">
             Career changer from healthcare to tech. I've traded the operating
             room for the keyboard! Currently studying software development at{" "}
@@ -42,10 +57,9 @@ const About = () => {
             played football my whole life so teamwork and rhythm guide
             everything I do!
           </p>
-
-        </div>
+        </motion.div>
       </div>
-          <Icons />
+      <Icons />
     </div>
   );
 };

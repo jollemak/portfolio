@@ -1,129 +1,84 @@
+"use client";
+
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 const Icons = () => {
+  const techStack = [
+    { src: "/icons/javascript.svg", alt: "JavaScript", name: "JavaScript" },
+    { src: "/icons/typescript.svg", alt: "TypeScript", name: "TypeScript" },
+    { src: "/icons/go-logo.svg", alt: "Go", name: "Go" },
+    { src: "/icons/react-icon.svg", alt: "React", name: "React" },
+    { src: "/icons/nextjs-icon.svg", alt: "Next.js", name: "Next.js" },
+    { src: "/icons/tailwind.svg", alt: "Tailwind CSS", name: "Tailwind" },
+    { src: "/icons/mongodb.svg", alt: "MongoDB", name: "MongoDB" },
+    { src: "/icons/postre-logo.svg", alt: "PostgreSQL", name: "PostgreSQL" },
+  ];
+
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item: Variants = {
+    hidden: { opacity: 0, y: 20, scale: 0.8 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
       <div className="mt-8">
-        <h3 className="text-2xl font-light text-white mb-6 text-center">
+        <motion.h3
+          className="text-2xl font-light text-white mb-6 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           My Tech Stack
-        </h3>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-6">
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/javascript.svg"
-                alt="JavaScript"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">
-              JavaScript
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/typescript.svg"
-                alt="TypeScript"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">
-              TypeScript
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/go-logo.svg"
-                alt="Go"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">Go</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/react-icon.svg"
-                alt="React"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">React</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/nextjs-icon.svg"
-                alt="Next.js"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">
-              Next.js
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/tailwind.svg"
-                alt="Tailwind CSS"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">
-              Tailwind
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/mongodb.svg"
-                alt="MongoDB"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">
-              MongoDB
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
-              <Image
-                src="/icons/postre-logo.svg"
-                alt="PostgreSQL"
-                width={40}
-                height={40}
-                style={{ width: "auto", height: "40px" }}
-              />
-            </div>
-            <span className="text-xs text-neutral-400 text-center">
-              PostgreSQL
-            </span>
-          </div>
-        </div>
+        </motion.h3>
+        <motion.div
+          className="grid grid-cols-3 md:grid-cols-5 gap-6"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {techStack.map((tech, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center gap-2 group"
+              variants={item}
+            >
+              <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
+                <div className="relative w-10 h-10">
+                  <Image
+                    src={tech.src}
+                    alt={tech.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <span className="text-xs text-neutral-400 text-center">
+                {tech.name}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </>
   );
