@@ -13,7 +13,7 @@ const Icons = () => {
     { src: "/icons/tailwind.svg", alt: "Tailwind CSS", name: "Tailwind" },
     { src: "/icons/mongodb.svg", alt: "MongoDB", name: "MongoDB" },
     { src: "/icons/postre-logo.svg", alt: "PostgreSQL", name: "PostgreSQL" },
-    { src: "/icons/github-mark-white.png", alt: "GitHub", name: "GitHub" },
+    { src: "/icons/wp.svg", alt: "WordPress", name: "WordPress" },
     { src: "/icons/canva.svg", alt: "Canva", name: "Canva" },
   ];
 
