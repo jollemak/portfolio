@@ -13,6 +13,8 @@ const Icons = () => {
     { src: "/icons/tailwind.svg", alt: "Tailwind CSS", name: "Tailwind" },
     { src: "/icons/mongodb.svg", alt: "MongoDB", name: "MongoDB" },
     { src: "/icons/postre-logo.svg", alt: "PostgreSQL", name: "PostgreSQL" },
+    { src: "/icons/github-mark-white.png", alt: "GitHub", name: "GitHub" },
+    { src: "/icons/canva.svg", alt: "Canva", name: "Canva" },
   ];
 
   const container: Variants = {
@@ -48,7 +50,7 @@ const Icons = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          My Tech Stack
+          Skills & Tools
         </motion.h3>
         <motion.div
           className="grid grid-cols-3 md:grid-cols-5 gap-6"
@@ -63,7 +65,7 @@ const Icons = () => {
               className="flex flex-col items-center gap-2 group"
               variants={item}
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300 group-hover:bg-gray-700/50 group-hover:scale-110">
+              <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 rounded-lg p-3 transition-all duration-300">
                 <div className="relative w-10 h-10">
                   <Image
                     src={tech.src}
