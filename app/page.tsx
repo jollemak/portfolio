@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import About from "@/components/About";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/ui/Navbar";
 import Contact from "@/components/Contact";
-import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export default function Home() {
   return (

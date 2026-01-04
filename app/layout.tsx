@@ -7,6 +7,8 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap",
   weight: ["400", "500", "700"],
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

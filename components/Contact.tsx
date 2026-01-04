@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,10 +47,9 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full max-w-5xl mx-auto px-4 py-12 md:py-16">
-      <h2 className="text-3xl md:text-4xl font-light text-white text-center mb-20">
+      <h2 className="text-3xl md:text-4xl font-light text-white text-center mb-10">
         Contact
       </h2>
-
       <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
         <input
           type="text"
