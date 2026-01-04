@@ -11,6 +11,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --font-sans: var(--font-roboto), system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -44,7 +45,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-orange-500: #eb0d1cff;
   --color-gray-900: #1a1a1a;
-  --color-gray-800: #c9bbbbff;
+  --color-gray-800: #272727ff;
   --animate-aurora: aurora 60s linear infinite;
   
     @keyframes aurora {

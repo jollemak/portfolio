@@ -1,13 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import Icons from "./ui/icons";
 
 const About = () => {
   return (
     <div id="about" className="w-full max-w-5xl mx-auto px-4 py-12 md:py-16">
-      <h2 className="text-3xl md:text-4xl font-light text-white text-center mb-8">
+      <h2 className="text-3xl md:text-4xl font-light text-white text-center mb-5">
         About Me
       </h2>
-      
+
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         <div className="flex-shrink-0">
           <Image
@@ -19,23 +19,33 @@ const About = () => {
             style={{ width: "300px", height: "400px" }}
           />
         </div>
-        
+
         <div className="flex-1 max-w-2xl">
           <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-4">
-            Career changer from healthcare to tech. I've traded
-            the operating room for the keyboard! Currently
-            studying software development at <span className="text-orange-500 font-semibold">kood/Sisu</span>, a
-            hands-on coding school in Finland. Passionate about
+            Career changer from healthcare to tech. I've traded the operating
+            room for the keyboard! Currently studying software development at{" "}
+            <span className="text-orange-500 font-semibold">
+              <a
+                href="https://koodsisu.fi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                kood/Sisu
+              </a>
+            </span>
+            , a hands-on coding school in Finland. Passionate about
             problem-solving, clean code, and continuous learning.
           </p>
-          
-          <p className="text-neutral-300 text-base md:text-lg leading-relaxed">
-            Outside of coding, I play guitar and sing in a cover band.
-            I've also played football my whole life —
-            teamwork and rhythm guide everything I do!
+
+          <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-8">
+            Outside of coding, I play guitar and sing in a cover band. I've also
+            played football my whole life so teamwork and rhythm guide
+            everything I do!
           </p>
+
         </div>
       </div>
+          <Icons />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Modal from "./modal";
 
 export const BentoGrid = ({
   className,
@@ -10,7 +11,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-4xl grid-cols-1 gap-3 md:auto-rows-[14rem] lg:auto-rows-[16rem] md:grid-cols-3",
+        "mx-auto grid max-w-5xl grid-cols-1 gap-x-3 gap-y-10 md:auto-rows-[14rem] lg:auto-rows-[16rem] md:grid-cols-3",
         className
       )}
     >
@@ -25,17 +26,23 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  link,
+  demoVideo,
+  images,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  link?: string;
+  demoVideo?: string;
+  images?: string[];
 }) => {
-  return (
+  const content = (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-2 rounded-xl border border-neutral-500 bg-gray-900 p-3 transition duration-200 hover:shadow-white dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-3 rounded-xl border border-neutral-500 bg-gray-900 p-3 transition duration-200 hover:shadow-2xl hover:shadow-white/30 dark:border-white/[0.2] dark:bg-black dark:shadow-none dark:hover:shadow-2xl dark:hover:shadow-white/30",
         className
       )}
     >
@@ -50,5 +57,17 @@ export const BentoGridItem = ({
         </div>
       </div>
     </div>
+  );
+
+  return (
+    <Modal
+      title={typeof title === "string" ? title : "Project Details"}
+      description={typeof description === "string" ? description : ""}
+      link={link}
+      demoVideo={demoVideo}
+      images={images}
+    >
+      {content}
+    </Modal>
   );
 };

@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
+import Contact from "@/components/Contact";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Hero />
       <Grid />
       <About />
+      <Contact />
+      <ScrollToTop />
     </main>
   );
 }
