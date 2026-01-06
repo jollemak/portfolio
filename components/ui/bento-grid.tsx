@@ -29,6 +29,7 @@ export const BentoGridItem = ({
   link,
   demoVideo,
   images,
+  tags
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -37,7 +38,8 @@ export const BentoGridItem = ({
   icon?: React.ReactNode;
   link?: string;
   demoVideo?: string;
-  images?: string[];
+    images?: string[];
+  tags?: string[];
 }) => {
   const content = (
     <div
@@ -53,7 +55,9 @@ export const BentoGridItem = ({
           {title}
         </div>
         <div className="font-sans text-sm font-normal leading-tight text-neutral-200 dark:text-neutral-300 overflow-hidden text-ellipsis line-clamp-3">
-          {description}
+          {tags && tags.map(tag => (
+            <span key={tag} className="mr-2 inline-block bg-gray-700/50 px-2 py-1 rounded-full text-xs text-neutral-300 mb-1 mt-1">{tag}</span>
+          ))}
         </div>
       </div>
     </div>

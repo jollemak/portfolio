@@ -24,8 +24,11 @@ const About = () => {
             alt="Profile Picture"
             width={400}
             height={400}
-            className="rounded-full border-4 border-orange-500 shadow-2xl"
-            style={{ width: "300px", height: "400px" }}
+            className="rounded-full border-4 border-orange-500 shadow-2xl profile-pic"
+            style={{
+              width: "clamp(200px, 50vw, 300px)",
+              height: "auto",
+            }}
           />
         </motion.div>
 

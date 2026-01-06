@@ -32,8 +32,9 @@ const Hero = () => {
               <Image
                 src="/icons/github-mark-white.png"
                 alt="GitHub Icon"
-                width={40}
                 height={40}
+                width={40}
+                style={{ width: "auto", height: "40px" }}
               />
             </a>
             <a
@@ -46,6 +47,7 @@ const Hero = () => {
                 alt="LinkedIn Icon"
                 width={40}
                 height={40}
+                style={{ width: "auto", height: "40px" }}
               />
             </a>
           </div>

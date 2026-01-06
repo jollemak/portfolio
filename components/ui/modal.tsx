@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import VideoModal from "./VideoModal";
 
 interface ModalProps {
   title: string;
@@ -21,6 +22,7 @@ const Modal = ({
   images,
 }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -45,11 +47,11 @@ const Modal = ({
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black/30 backdrop-blur-sm transition-opacity duration-300"
+          className="fixed inset-0 z-50 grid h-screen w-screen place-items-center bg-black/30 backdrop-blur-sm transition-opacity duration-300"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative m-4 p-4 w-11/12 md:w-4/5 lg:w-3/5 max-w-4xl rounded-lg bg-gray-900/80 backdrop-blur-md border border-neutral-500 shadow-xl"
+            className="relative m-4 p-4 w-11/12 md:w-4/5 lg:w-3/5 max-w-4xl rounded-lg bg-gray-900 backdrop-blur-md border border-neutral-500 shadow-xl"
           >
             <div className="flex shrink-0 items-center pb-4 text-xl font-medium text-white">
               {title}
@@ -151,6 +153,7 @@ const Modal = ({
               )}
               {demoVideo && (
                 <button
+                  onClick={() => setIsVideoOpen(true)}
                   className="rounded-md bg-orange-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-orange-600 active:bg-orange-700"
                   type="button"
                 >
@@ -167,6 +170,15 @@ const Modal = ({
             </div>
           </div>
         </div>
+      )}
+
+      {/* Video Modal */}
+      {isVideoOpen && demoVideo && (
+        <VideoModal
+          title={title}
+          demoVideo={demoVideo}
+          onClose={() => setIsVideoOpen(false)}
+        />
       )}
     </>
   );
