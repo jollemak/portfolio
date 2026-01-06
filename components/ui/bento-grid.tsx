@@ -11,7 +11,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-5xl grid-cols-1 gap-x-3 gap-y-15 md:auto-rows-[14rem] lg:auto-rows-[16rem] md:grid-cols-3",
+        "mx-auto grid max-w-5xl grid-cols-1 gap-x-3 gap-y-15 md:grid-rows-[repeat(auto-fit,16rem)] md:grid-cols-3",
         className
       )}
     >
@@ -42,7 +42,7 @@ export const BentoGridItem = ({
   const content = (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-3 rounded-xl border border-neutral-500 bg-gray-900 p-3 transition duration-200 hover:shadow-2xl hover:shadow-white/30 dark:border-white/[0.2] dark:bg-black dark:shadow-none dark:hover:shadow-2xl dark:hover:shadow-white/30",
+        "group/bento shadow-input row-span-1 h-70 flex flex-col justify-between space-y-3 rounded-xl border border-neutral-500 bg-gray-900 p-3 transition duration-200 hover:shadow-2xl hover:shadow-white/30 dark:border-white/[0.2] dark:bg-black dark:shadow-none dark:hover:shadow-2xl dark:hover:shadow-white/30",
         className
       )}
     >
@@ -52,7 +52,7 @@ export const BentoGridItem = ({
         <div className="mt-1 mb-1 font-sans font-bold text-s text-neutral-200 dark:text-neutral-200">
           {title}
         </div>
-        <div className="font-sans text-sm font-normal leading-tight text-neutral-200 dark:text-neutral-300">
+        <div className="font-sans text-sm font-normal leading-tight text-neutral-200 dark:text-neutral-300 overflow-hidden text-ellipsis line-clamp-3">
           {description}
         </div>
       </div>

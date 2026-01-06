@@ -13,7 +13,7 @@ const About = () => {
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         <motion.div
-          className="flex-shrink-0"
+          className="shrink-0"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
