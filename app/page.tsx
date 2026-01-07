@@ -3,7 +3,7 @@ import Grid from "@/components/Grid";
 import About from "@/components/About";
 import Navbar from "@/components/ui/Navbar";
 import Contact from "@/components/Contact";
-import ScrollToTop from "@/components/ui/ScrollToTop";
+// import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <Grid />
       <About />
       <Contact />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </main>
   );
 }
