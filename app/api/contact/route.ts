@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
    
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "contact@joel-portfolio-self.vercel.app",
       to: process.env.CONTACT_EMAIL!,
       subject: `New message from ${name}`,
       html: `

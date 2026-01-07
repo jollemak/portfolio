@@ -153,7 +153,7 @@ export const projects = [
     tags: [tags.go, tags.html, tags.css, tags.rest, tags.docker],
   },
   {
-    title: "MatchMe Dating App",
+    title: "Matching App",
     description: `Matching app that connects users based on shared interests and preferences. 
       Features real-time chat, profile creation, and match suggestions.
       Built with Next.js and TypeScript for the frontend, and Go for the backend.
@@ -188,45 +188,7 @@ export const projects = [
     ],
   },
   {
-    title: "Art Gallery App",
-      description: `ASCII Art Decoder/Encoder is a Go-based web server application that encodes and decodes text-based art using custom functions. It provides an HTTP server for handling encoding and decoding requests.`,
-    header: (
-      <div className="flex h-40 w-full items-center justify-center overflow-hidden">
-        <Image
-          src="/art/art1.png"
-          alt="Art Gallery Screenshot"
-          width={400}
-          height={225}
-          className="w-full h-full object-cover rounded-lg shadow-lg"
-        />
-      </div>
-    ),
-    className: "md:col-span-1",
-    demoVideo: "/art/art.mp4",
-    images: ["/art/art1.png", "/art/art2.png"],
-    tags: [tags.go, tags.html, tags.css, tags.rest],
-  },
-  {
-    title: "Car Dealership System",
-      description: `Cars Viewer is a web application that displays car data fetched from a JSON API. Users can search for cars by name and filter results by category, manufacturer, and year.`,
-    header: (
-      <div className="flex h-40 w-full items-center justify-center overflow-hidden">
-        <Image
-          src="/cars/cars1.png"
-          alt="Car Dealership Screenshot"
-          width={400}
-          height={225}
-          className="w-full h-full object-cover rounded-lg shadow-lg"
-        />
-      </div>
-    ),
-    className: "md:col-span-1",
-    demoVideo: "/cars/cars.mp4",
-    images: ["/cars/cars1.png", "/cars/cars2.png"],
-    tags: [tags.go, tags.html, tags.css, tags.rest],
-  },
-  {
-    title: "Stations",
+    title: "Trains Pathfinding Simulator",
     description: `The stations project simulates a train system where trains move between stations using the shortest available routes. It ensures that no two trains use the same station or connection simultaneously, except for the starting and ending stations. The system is designed to support concurrent train movements for improved performance.`,
     header: (
       <div className="flex h-40 w-full items-center justify-center overflow-hidden">
@@ -246,6 +208,44 @@ export const projects = [
       "/trains/trains2.png",
       "/trains/trains3.png",
     ],
+    tags: [tags.go, tags.html, tags.css, tags.rest],
+  },
+  {
+    title: "ASCII Art Decoder/Encoder",
+    description: `ASCII Art Decoder/Encoder is a Go-based web server application that encodes and decodes text-based art using custom functions. It provides an HTTP server for handling encoding and decoding requests.`,
+    header: (
+      <div className="flex h-40 w-full items-center justify-center overflow-hidden">
+        <Image
+          src="/art/art1.png"
+          alt="Art Gallery Screenshot"
+          width={400}
+          height={225}
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
+    ),
+    className: "md:col-span-1",
+    demoVideo: "/art/art.mp4",
+    images: ["/art/art1.png", "/art/art2.png"],
+    tags: [tags.go, tags.html, tags.css, tags.rest],
+  },
+  {
+    title: "Car Viewer",
+    description: `Cars Viewer is a web application that displays car data fetched from a JSON API. Users can search for cars by name and filter results by category, manufacturer, and year.`,
+    header: (
+      <div className="flex h-40 w-full items-center justify-center overflow-hidden">
+        <Image
+          src="/cars/cars1.png"
+          alt="Car Dealership Screenshot"
+          width={400}
+          height={225}
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
+    ),
+    className: "md:col-span-1",
+    demoVideo: "/cars/cars.mp4",
+    images: ["/cars/cars1.png", "/cars/cars2.png"],
     tags: [tags.go, tags.html, tags.css, tags.rest],
   },
 ];

@@ -1,4 +1,6 @@
 
+import { useEffect } from "react";
+
 interface VideoModalProps {
   title: string;
   demoVideo: string;
@@ -6,6 +8,13 @@ interface VideoModalProps {
 }
 
 const VideoModal = ({ title, demoVideo, onClose }: VideoModalProps) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
   return (
     <div
       onClick={onClose}

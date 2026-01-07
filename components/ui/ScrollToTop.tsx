@@ -7,7 +7,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 2200) {
+      if (window.scrollY > 2300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -35,7 +35,7 @@ const ScrollToTop = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-4 w-4"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
