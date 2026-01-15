@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Joel Mäkelä portfolio",
+  title: "Portfolio Joel Mäkelä",
+  description: "Joel Mäkelä's portfolio",
   icons: {
     icon: [
       { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },

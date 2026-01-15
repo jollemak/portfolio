@@ -59,6 +59,32 @@ export const projects = [
     ],
     tags: [tags.javascript, tags.html, tags.css],
   },
+  {
+    title: "Bombastic Multiplayer",
+    description: `This was a fun group project where we developed an online multiplayer game inspired by Bomberman, 
+    featuring power-ups and a single-player mode with AI-controlled opponents.
+    My primary responsibilities included implementing real-time connectivity between
+     local and remote clients using Socket.IO, as well as deploying the game to the web using Fly.io.`,
+    header: (
+      <div className="flex h-40 w-full items-center justify-center overflow-hidden">
+        <Image
+          src="/bombastic/kuva1.png"
+          alt="Bombastic Screenshot"
+          width={400}
+          height={225}
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
+    ),
+    className: "md:col-span-1",
+    link: "https://bombastic.fly.dev/",
+    images: [
+      "/bombastic/kuva1.png",
+      "/bombastic/kuva2.png",
+      "/bombastic/kuva3.png",
+    ],
+    tags: [tags.javascript, tags.socketio, tags.html, tags.css, "Fly.io"],
+  },
 
   {
     title: "Race Track Info Screens",
@@ -86,6 +112,7 @@ export const projects = [
     ],
     tags: [tags.react, tags.javascript, tags.socketio, tags.mongodb],
   },
+
   {
     title: "wasaweb.fi",
     description: `WordPress website for my freelancing agency. 

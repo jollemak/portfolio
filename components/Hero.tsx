@@ -15,7 +15,6 @@ const Hero = () => {
                 Joel Mäkelä
               </Highlight>
             </span>
-            .
           </h1>
           <p className="text-3xl md:text-5xl font-light text-white">
             Full Stack Developer.
