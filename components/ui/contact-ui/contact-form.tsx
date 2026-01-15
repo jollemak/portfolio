@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -9,7 +10,15 @@ const ContactForm = () => {
     });
     const [status, setStatus] = useState<
       "idle" | "loading" | "success" | "error"
-    >("idle");
+      >("idle");
+  
+  useEffect(() => {
+    if (status === "success") {
+      toast.success("Message sent successfully!");
+    } else if (status === "error") {
+      toast.error("Failed to send message. Please try again.");
+    }
+  }, [status]);
 
     const handleChange = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -44,6 +53,33 @@ const ContactForm = () => {
     };
     return (
       <form onSubmit={handleSubmit} className="space-y-6">
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          gutter={8}
+          toastOptions={{
+            // Default options
+            duration: 4000,
+            style: {
+              background: "gray-800", // gray-800
+              color: "#fff",
+            },
+            // Success toast style
+            success: {
+              duration: 3000,
+              style: {
+                background: "#272727ff", // green-600
+              },
+            },
+            // Error toast style
+            error: {
+              duration: 4000,
+              style: {
+                background: "#272727ff", // red-600
+              },
+            },
+          }}
+        />
         <input
           type="text"
           name="name"
@@ -81,17 +117,6 @@ const ContactForm = () => {
         >
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>
-
-        {status === "success" && (
-          <p className="text-green-400 text-center">
-            Message sent successfully!
-          </p>
-        )}
-        {status === "error" && (
-          <p className="text-red-400 text-center">
-            Failed to send message. Try again.
-          </p>
-        )}
       </form>
     );
 }
