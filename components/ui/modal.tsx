@@ -46,7 +46,7 @@ const Modal = ({
   const prevImage = () => {
     if (images && images.length > 0) {
       setCurrentImageIndex(
-        (prev) => (prev - 1 + images.length) % images.length
+        (prev) => (prev - 1 + images.length) % images.length,
       );
     }
   };
@@ -85,7 +85,7 @@ const Modal = ({
                         src={image}
                         alt={`${title} - Image ${index + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="(max-width: 768px) 100vw, 600px"
                       />
                     </div>

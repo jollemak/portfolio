@@ -12,7 +12,7 @@ export const BentoGrid = ({
     <div
       className={cn(
         "mx-auto grid max-w-5xl grid-cols-1 gap-x-3 gap-y-15 md:grid-rows-[repeat(auto-fit,16rem)] md:grid-cols-3",
-        className
+        className,
       )}
     >
       {children}
@@ -24,12 +24,11 @@ export const BentoGridItem = ({
   className,
   title,
   description,
-  header,
   icon,
   link,
   demoVideo,
   images,
-  tags
+  tags,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -38,26 +37,41 @@ export const BentoGridItem = ({
   icon?: React.ReactNode;
   link?: string;
   demoVideo?: string;
-    images?: string[];
+  images?: string[];
   tags?: string[];
 }) => {
   const content = (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 h-70 flex flex-col justify-between space-y-3 rounded-xl border border-neutral-500 bg-gray-900 p-3 transition duration-200 hover:shadow-2xl hover:shadow-white/30 dark:border-white/[0.2] dark:bg-black dark:shadow-none dark:hover:shadow-2xl dark:hover:shadow-white/30",
-        className
+        "group/bento shadow-input row-span-1 h-70 flex flex-col justify-between space-y-3 rounded-xl border border-neutral-500 bg-gray-900 p-3 transition duration-200 hover:shadow-2xl hover:shadow-white/30 dark:border-white/20 dark:bg-black dark:shadow-none dark:hover:shadow-2xl dark:hover:shadow-white/30",
+        className,
       )}
     >
-      {header}
+      {/* Image rendering for grid item */}
+      {images && images.length > 0 && (
+        <div className="w-full aspect-video bg-black rounded-lg overflow-hidden flex items-center justify-center mb-2">
+          <img
+            src={images[0]}
+            alt={typeof title === "string" ? title : "Project image"}
+            className="w-full h-full object-contain"
+          />
+        </div>
+      )}
       <div className="transition duration-200 group-hover/bento:translate-x-2">
         {icon}
         <div className="mt-1 mb-1 font-sans font-bold text-s text-neutral-200 dark:text-neutral-200">
           {title}
         </div>
         <div className="font-sans text-sm font-normal leading-tight text-neutral-200 dark:text-neutral-300 overflow-hidden text-ellipsis line-clamp-3">
-          {tags && tags.map(tag => (
-            <span key={tag} className="mr-2 inline-block bg-gray-700/50 px-2 py-1 rounded-full text-xs text-neutral-300 mb-1 mt-1">{tag}</span>
-          ))}
+          {tags &&
+            tags.map((tag) => (
+              <span
+                key={tag}
+                className="mr-2 inline-block bg-gray-700/50 px-2 py-1 rounded-full text-xs text-neutral-300 mb-1 mt-1"
+              >
+                {tag}
+              </span>
+            ))}
         </div>
       </div>
     </div>

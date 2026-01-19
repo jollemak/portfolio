@@ -275,4 +275,36 @@ export const projects = [
     images: ["/cars/cars1.png", "/cars/cars2.png"],
     tags: [tags.go, tags.html, tags.css, tags.rest],
   },
+
+  {
+    title: "Hirsipuu",
+    description: `
+     Hirsipuu is a simple command-line game written in Go.
+     It's based on the classic Finnish word game I played in
+     elementary school, aka 'Hangman'.
+
+    I created this project to practice Go fundamentals on my own,
+    without the help of AI. The goal was to make something fun and
+    simple while learning the basics of the language.
+    `,
+    header: (
+      <div className="flex h-40 w-full items-center justify-center overflow-hidden">
+        <Image
+          src="/hirsipuu/image1.png"
+          alt="Hirsipuu Screenshot"
+          width={400}
+          height={225}
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
+    ),
+    className: "md:col-span-1",
+    demoVideo: "/hirsipuu/hirsipuu.mp4",
+    images: [
+      "/hirsipuu/image1.png",
+      "/hirsipuu/image2.png",
+      "/hirsipuu/image3.png",
+    ],
+    tags: [tags.go],
+  },
 ];
